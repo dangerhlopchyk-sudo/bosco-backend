@@ -1,0 +1,112 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Фільтр масла",
+      "vehicle_brand": "Toyota",
+      "part_number": "TY-OF-1001",
+      "origin_country": "Japan",
+      "price": "420.00"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Гальмівні колодки",
+      "vehicle_brand": "Volkswagen",
+      "part_number": "VW-BP-2040",
+      "origin_country": "Germany",
+      "price": "1350.50"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Повітряний фільтр",
+      "vehicle_brand": "Ford",
+      "part_number": "FD-AF-3302",
+      "origin_country": "USA",
+      "price": "510.75"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Свічка запалювання",
+      "vehicle_brand": "Honda",
+      "part_number": "HN-SP-4408",
+      "origin_country": "Japan",
+      "price": "260.00"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Акумулятор",
+      "vehicle_brand": "BMW",
+      "part_number": "BM-BT-5512",
+      "origin_country": "Germany",
+      "price": "4200.00"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "Ремінь ГРМ",
+      "vehicle_brand": "Renault",
+      "part_number": "RN-TB-6721",
+      "origin_country": "France",
+      "price": "980.90"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Амортизатор",
+      "vehicle_brand": "Nissan",
+      "part_number": "NS-SH-7810",
+      "origin_country": "Japan",
+      "price": "1880.00"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "name": "Паливний насос",
+      "vehicle_brand": "Hyundai",
+      "part_number": "HY-FP-8944",
+      "origin_country": "South Korea",
+      "price": "2450.30"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "name": "Радіатор охолодження",
+      "vehicle_brand": "Skoda",
+      "part_number": "SK-RD-9066",
+      "origin_country": "Czech Republic",
+      "price": "3100.00"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "name": "Фара передня",
+      "vehicle_brand": "Mazda",
+      "part_number": "MZ-HL-0199",
+      "origin_country": "Japan",
+      "price": "2750.80"
+    }
+  }
+]
