@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Склад автозапчастин{% endblock %}</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="{% url 'products_list' %}">
+                    <span class="logo-icon">⚙️</span>
+                    <span class="logo-text">АвтоСклад <strong>BOSCO</strong></span>
+                </a>
+            </div>
+            {% include 'partials/menu.html' %}
+        </div>
+    </header>
+
+    <main class="container main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Складський застосунок на шаблонах Django | ПР №2.5 (Варіант 11 — Автозапчастини)</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <title>Список автозапчастин | Склад</title>
-</head>
-<body>
-    <h1>Складський облік автозапчастин</h1>
-    <p>Варіант 11: Управління наявністю деталей на складі</p>
+{% extends 'base.html' %}
 
-    <table>
+{% block title %}Список автозапчастин | Склад{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="page-title-wrap">
+        <h1>Складський облік автозапчастин</h1>
+        <p class="subtitle">Варіант 11: Управління наявністю деталей на складі</p>
+    </div>
+    <div class="page-actions">
+        <a href="{% url 'replenish' count=5 %}" class="btn btn-secondary">⚡ Згенерувати +5 деталей</a>
+    </div>
+</div>
+
+<div class="table-card">
+    <table class="data-table">
         <thead>
             <tr>
-                <th>№</th>
-                <th>ID</th>
+                <th style="width: 50px;">№</th>
+                <th style="width: 60px;">ID</th>
                 <th>Назва деталі</th>
                 <th>Марка авто</th>
                 <th>Номер деталі (Part Number)</th>
@@ -23,23 +29,26 @@
         <tbody>
             {% for product in products %}
             <tr>
-                <td>{{ forloop.counter }}</td>
-                <td>#{{ product.id }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.vehicle_brand }}</td>
-                <td>{{ product.part_number }}</td>
+                <td class="text-muted">{{ forloop.counter }}</td>
+                <td><span class="id-badge">#{{ product.id }}</span></td>
+                <td class="font-weight-bold">{{ product.name }}</td>
+                <td><span class="brand-tag">{{ product.vehicle_brand }}</span></td>
+                <td><code>{{ product.part_number }}</code></td>
                 <td>{{ product.origin_country }}</td>
-                <td>{{ product.price }} грн.</td>
+                <td class="price-cell">{{ product.price }} грн.</td>
             </tr>
             {% empty %}
             <tr>
-                <td colspan="7">
-                    <h3>Товарів немає</h3>
-                    <p>Наразі на складі немає жодної зареєстрованої деталі.</p>
+                <td colspan="7" class="empty-state">
+                    <div class="empty-box">
+                        <span class="empty-icon">📦</span>
+                        <h3>Товарів немає</h3>
+                        <p>Наразі на складі немає жодної зареєстрованої деталі.</p>
+                    </div>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+</div>
+{% endblock %}
