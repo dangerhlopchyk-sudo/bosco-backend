@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load catalog_extras %}
 
 {% block title %}Список автозапчастин | Склад{% endblock %}
 
@@ -35,7 +36,7 @@
                 <td><span class="brand-tag">{{ product.vehicle_brand }}</span></td>
                 <td><code>{{ product.part_number }}</code></td>
                 <td>{{ product.origin_country }}</td>
-                <td class="price-cell">{{ product.price }} грн.</td>
+                <td class="price-cell">{{ product.price|uah }}</td>
             </tr>
             {% empty %}
             <tr>

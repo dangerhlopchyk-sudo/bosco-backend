@@ -1,8 +1,10 @@
+{% load catalog_extras %}
 <nav class="main-nav">
     <ul class="nav-list">
         <li class="nav-item">
             <a href="{% url 'products_list' %}" class="nav-link">
                 📋 Список товарів
+                <span class="badge">{% product_count %}</span>
             </a>
         </li>
     </ul>
