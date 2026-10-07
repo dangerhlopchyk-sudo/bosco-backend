@@ -10,6 +10,7 @@
         <p class="subtitle">Варіант 11: Управління наявністю деталей на складі</p>
     </div>
     <div class="page-actions">
+        <a href="{% url 'add_product' %}" class="btn btn-primary">➕ Додати запчастину</a>
         <a href="{% url 'replenish' count=5 %}" class="btn btn-secondary">⚡ Згенерувати +5 деталей</a>
     </div>
 </div>
@@ -45,6 +46,7 @@
                         <span class="empty-icon">📦</span>
                         <h3>Товарів немає</h3>
                         <p>Наразі на складі немає жодної зареєстрованої деталі.</p>
+                        <a href="{% url 'add_product' %}" class="btn btn-primary btn-sm">Додати перший товар</a>
                     </div>
                 </td>
             </tr>
