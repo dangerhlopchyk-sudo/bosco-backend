@@ -36,6 +36,22 @@ def generate_product():
     )
 
 
+def products_list(request):
+    products = Product.objects.all().order_by("id")
+    return render(
+        request,
+        "catalog/products.html",
+        {
+            "products": products,
+            "title": "Склад автозапчастин",
+        },
+    )
+
+
+def products(request):
+    return products_list(request)
+
+
 def replenish(request, count):
     if count < 1:
         messages.error(request, "Кількість має бути більшою за 0.")
